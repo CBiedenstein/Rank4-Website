@@ -109,11 +109,12 @@ function Capabilities() {
   const globalCapOpacity =
     capProgress < 0.7 ? 1 : clamp(1 - (capProgress - 0.7) / 0.25, 0, 1)
 
-  const headerOpacity = clamp(capProgress / 0.08, 0, 1)
-  const headerY = Math.round(Math.max(40 - capProgress * 500, 0))
+  // Header visible immediately
+  const headerOpacity = 1
+  const headerY = 0
 
   const getCardStyle = (index: number) => {
-    const startAt = 0.05 + index * 0.07
+    const startAt = index * 0.06
     const opacity = clamp((capProgress - startAt) / 0.1, 0, 1)
     const y = Math.round(Math.max(50 - (capProgress - startAt) * 500, 0))
     return { opacity, y }
@@ -292,24 +293,23 @@ function Philosophy() {
   const globalOpacity =
     philProgress < 0.75 ? 1 : clamp(1 - (philProgress - 0.75) / 0.2, 0, 1)
 
-  // Header fades in immediately
-  const headerOpacity = clamp(philProgress / 0.08, 0, 1)
-  const headerY = Math.round(Math.max(40 - philProgress * 500, 0))
+  // Header and description visible immediately
+  const headerOpacity = 1
+  const headerY = 0
 
-  // Description
-  const descOpacity = clamp((philProgress - 0.06) / 0.1, 0, 1)
-  const descY = Math.round(Math.max(30 - (philProgress - 0.06) * 300, 0))
+  const descOpacity = 1
+  const descY = 0
 
-  // Each principle card
+  // Each principle card reveals as you scroll
   const getCardStyle = (index: number) => {
-    const startAt = 0.12 + index * 0.1
+    const startAt = index * 0.08
     const opacity = clamp((philProgress - startAt) / 0.1, 0, 1)
     const y = Math.round(Math.max(50 - (philProgress - startAt) * 400, 0))
     return { opacity, y }
   }
 
-  // Decorative element
-  const decoOpacity = clamp((philProgress - 0.08) / 0.15, 0, 1)
+  // Decorative element visible immediately
+  const decoOpacity = 1
 
   // Image parallax
   const imageY = philProgress * -60

@@ -8,7 +8,6 @@ import { scrollToSection } from "@/lib/scroll-to-section"
 const navLinks = [
   { label: "Capabilities", href: "#capabilities" },
   { label: "Philosophy", href: "#philosophy" },
-  { label: "Contact", href: "#contact" },
 ]
 
 export function Navbar() {
