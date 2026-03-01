@@ -33,7 +33,7 @@ export function Navbar() {
         backdropFilter: scrolled ? "blur(12px)" : "none",
       }}
     >
-      <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-12 lg:px-20">
+      <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 pt-[max(1rem,env(safe-area-inset-top))] md:px-12 lg:px-20">
         <a href="#" className="flex items-center">
           <Image
             src="/images/rank4-logo.svg"

@@ -130,7 +130,7 @@ function Capabilities() {
       className="relative scroll-mt-20"
       style={{ height: "400vh" }}
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-dvh w-full overflow-hidden">
         {/* Background image */}
         <div
           className="absolute inset-0"
@@ -169,7 +169,7 @@ function Capabilities() {
 
         {/* Content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] md:px-12 lg:px-20"
           style={{ opacity: globalCapOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
@@ -322,7 +322,7 @@ function Philosophy() {
       className="relative scroll-mt-20"
       style={{ height: "400vh" }}
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-dvh w-full overflow-hidden">
         {/* Background image */}
         <div
           className="absolute inset-0"
@@ -361,7 +361,7 @@ function Philosophy() {
 
         {/* Content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
