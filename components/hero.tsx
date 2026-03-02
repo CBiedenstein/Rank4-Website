@@ -55,7 +55,7 @@ export function Hero() {
   return (
     <div ref={containerRef} className="relative" style={{ height: "450vh" }}>
       {/* Sticky viewport */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-dvh w-full overflow-hidden">
         {/* Background image */}
         <div
           className="absolute inset-0"
@@ -95,7 +95,7 @@ export function Hero() {
 
         {/* Floating content layers */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-start overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:justify-center md:overflow-y-visible md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">

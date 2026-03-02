@@ -58,7 +58,7 @@ export function Contact() {
   return (
     <div ref={containerRef} className="relative" data-scroll-room="contact" style={{ height: "350vh" }}>
       {/* Sticky viewport */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-dvh w-full overflow-hidden">
         {/* Background image */}
         <div
           className="absolute inset-0"
@@ -97,7 +97,7 @@ export function Contact() {
 
         {/* Floating content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-start overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:justify-center md:overflow-y-visible md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
           id="contact"
         >
@@ -130,7 +130,7 @@ export function Contact() {
             </div>
 
             {/* Two-column layout */}
-            <div className="mt-10 grid gap-10 lg:mt-16 lg:grid-cols-5 lg:gap-16">
+            <div className="mt-6 grid gap-8 md:mt-10 lg:mt-16 lg:grid-cols-5 lg:gap-16">
               {/* Left - Info */}
               <div
                 className="lg:col-span-2"
