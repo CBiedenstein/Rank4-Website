@@ -97,7 +97,7 @@ export function Contact() {
 
         {/* Floating content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-start overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:justify-center md:overflow-y-visible md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-start px-6 pb-[max(1rem,env(safe-area-inset-bottom))] pt-[max(4.5rem,calc(3.5rem+env(safe-area-inset-top)))] md:justify-center md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
           id="contact"
         >
@@ -133,7 +133,7 @@ export function Contact() {
             <div className="mt-6 grid gap-8 md:mt-10 lg:mt-16 lg:grid-cols-5 lg:gap-16">
               {/* Left - Info */}
               <div
-                className="lg:col-span-2"
+                className="hidden lg:col-span-2 lg:block"
                 style={{
                   opacity: infoOpacity,
                   transform: `translateY(${Math.round(infoY)}px)`,
@@ -227,7 +227,7 @@ export function Contact() {
                 }}
               >
                 <div
-                  className="rounded-sm border p-6 md:p-8"
+                  className="rounded-sm border p-4 md:p-8"
                   style={{
                     borderColor: "rgba(162,112,53,0.2)",
                     backgroundColor: "rgba(33,17,3,0.9)",
@@ -333,7 +333,7 @@ export function Contact() {
                           id="contact-message"
                           name="message"
                           required
-                          rows={4}
+                          rows={3}
                           className="w-full resize-none rounded-sm border bg-transparent px-4 py-3 text-sm transition-colors focus:outline-none focus:ring-1"
                           style={{
                             borderColor: "rgba(162,112,53,0.25)",
@@ -358,7 +358,7 @@ export function Contact() {
 
             {/* Footer line */}
             <div
-              className="mt-12 flex items-center justify-between border-t pt-8 lg:mt-16"
+              className="mt-8 hidden items-center justify-between border-t pt-6 sm:flex lg:mt-16 lg:pt-8"
               style={{
                 borderColor: "rgba(162,112,53,0.15)",
                 opacity: footerOpacity,
