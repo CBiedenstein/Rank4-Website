@@ -169,12 +169,12 @@ function Capabilities() {
 
         {/* Content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-start overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:justify-center md:overflow-y-visible md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-start px-6 pb-[max(1rem,env(safe-area-inset-bottom))] pt-[max(4.5rem,calc(3.5rem+env(safe-area-inset-top)))] md:justify-center md:px-12 lg:px-20"
           style={{ opacity: globalCapOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
             <div
-              className="mb-6 md:mb-12"
+              className="mb-4 md:mb-12"
               style={{
                 opacity: headerOpacity,
                 transform: `translateY(${headerY}px)`,
@@ -193,7 +193,7 @@ function Capabilities() {
                 </span>
               </div>
               <h2
-                className="text-balance text-3xl font-bold tracking-tight md:text-6xl lg:text-7xl"
+                className="text-balance text-2xl font-bold tracking-tight md:text-6xl lg:text-7xl"
                 style={{ color: "#F1DAC4" }}
               >
                 Engineering
@@ -241,7 +241,7 @@ function Capabilities() {
                       {service.title}
                     </h3>
                     <p
-                      className="mt-1.5 text-xs leading-relaxed md:text-sm"
+                      className="mt-1.5 hidden text-xs leading-relaxed sm:block md:text-sm"
                       style={{ color: "#F1DAC4", opacity: 0.5 }}
                     >
                       {service.description}
@@ -361,11 +361,11 @@ function Philosophy() {
 
         {/* Content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-start overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:justify-center md:overflow-y-visible md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-start px-6 pb-[max(1rem,env(safe-area-inset-bottom))] pt-[max(4.5rem,calc(3.5rem+env(safe-area-inset-top)))] md:justify-center md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
-            <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-16">
+            <div className="grid items-start gap-4 lg:grid-cols-12 lg:gap-16">
               {/* Left column */}
               <div className="lg:col-span-5">
                 <div
@@ -387,7 +387,7 @@ function Philosophy() {
                     </span>
                   </div>
                   <h2
-                    className="text-balance text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+                    className="text-balance text-2xl font-bold tracking-tight md:text-5xl lg:text-6xl"
                     style={{ color: "#F1DAC4" }}
                   >
                     Engineering
@@ -403,7 +403,7 @@ function Philosophy() {
                   }}
                 >
                   <p
-                    className="mt-6 max-w-md text-pretty text-sm leading-relaxed md:text-base"
+                    className="mt-4 hidden max-w-md text-pretty text-sm leading-relaxed sm:block md:mt-6 md:text-base"
                     style={{ color: "#F1DAC4", opacity: 0.55 }}
                   >
                     High-performance signal processing demands more than clever
@@ -478,7 +478,7 @@ function Philosophy() {
                     return (
                       <div
                         key={principle.title}
-                        className="flex gap-4 rounded-sm border p-4 md:gap-5 md:p-8"
+                        className="flex gap-3 rounded-sm border p-3 md:gap-5 md:p-8"
                         style={{
                           borderColor: "rgba(162,112,53,0.12)",
                           backgroundColor: "rgba(33,17,3,0.55)",
@@ -516,7 +516,7 @@ function Philosophy() {
                             </h3>
                           </div>
                           <p
-                            className="mt-2 pl-8 text-sm leading-relaxed"
+                            className="mt-1 hidden pl-8 text-sm leading-relaxed sm:block md:mt-2"
                             style={{ color: "#F1DAC4", opacity: 0.45 }}
                           >
                             {principle.description}
