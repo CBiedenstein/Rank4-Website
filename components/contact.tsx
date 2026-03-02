@@ -255,12 +255,12 @@ export function Contact() {
                       </p>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                      <div className="grid gap-5 sm:grid-cols-2">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:gap-5">
+                      <div className="grid gap-3 sm:grid-cols-2 md:gap-5">
                         <div>
                           <label
                             htmlFor="contact-name"
-                            className="mb-2 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em]"
+                            className="mb-1 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] md:mb-2"
                             style={{ color: "#A27035" }}
                           >
                             Name
@@ -270,7 +270,7 @@ export function Contact() {
                             name="name"
                             type="text"
                             required
-                            className="w-full rounded-sm border bg-transparent px-4 py-3 text-sm transition-colors focus:outline-none focus:ring-1"
+                            className="w-full rounded-sm border bg-transparent px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-1 md:px-4 md:py-3"
                             style={{
                               borderColor: "rgba(162,112,53,0.25)",
                               color: "#F1DAC4",
@@ -281,7 +281,7 @@ export function Contact() {
                         <div>
                           <label
                             htmlFor="contact-email"
-                            className="mb-2 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em]"
+                            className="mb-1 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] md:mb-2"
                             style={{ color: "#A27035" }}
                           >
                             Email
@@ -291,7 +291,7 @@ export function Contact() {
                             name="email"
                             type="email"
                             required
-                            className="w-full rounded-sm border bg-transparent px-4 py-3 text-sm transition-colors focus:outline-none focus:ring-1"
+                            className="w-full rounded-sm border bg-transparent px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-1 md:px-4 md:py-3"
                             style={{
                               borderColor: "rgba(162,112,53,0.25)",
                               color: "#F1DAC4",
@@ -303,7 +303,7 @@ export function Contact() {
                       <div>
                         <label
                           htmlFor="contact-subject"
-                          className="mb-2 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em]"
+                          className="mb-1 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] md:mb-2"
                           style={{ color: "#A27035" }}
                         >
                           Subject
@@ -313,7 +313,7 @@ export function Contact() {
                           name="subject"
                           type="text"
                           required
-                          className="w-full rounded-sm border bg-transparent px-4 py-3 text-sm transition-colors focus:outline-none focus:ring-1"
+                          className="w-full rounded-sm border bg-transparent px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-1 md:px-4 md:py-3"
                           style={{
                             borderColor: "rgba(162,112,53,0.25)",
                             color: "#F1DAC4",
@@ -324,7 +324,7 @@ export function Contact() {
                       <div>
                         <label
                           htmlFor="contact-message"
-                          className="mb-2 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em]"
+                          className="mb-1 block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] md:mb-2"
                           style={{ color: "#A27035" }}
                         >
                           Message
@@ -334,7 +334,7 @@ export function Contact() {
                           name="message"
                           required
                           rows={3}
-                          className="w-full resize-none rounded-sm border bg-transparent px-4 py-3 text-sm transition-colors focus:outline-none focus:ring-1"
+                          className="w-full resize-none rounded-sm border bg-transparent px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-1 md:px-4 md:py-3"
                           style={{
                             borderColor: "rgba(162,112,53,0.25)",
                             color: "#F1DAC4",
