@@ -15,7 +15,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   const handleScroll = useCallback(() => {
-    setScrolled(window.scrollY > 80)
+    setScrolled(window.scrollY > 20)
   }, [])
 
   useEffect(() => {
