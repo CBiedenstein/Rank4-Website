@@ -169,12 +169,12 @@ function Capabilities() {
 
         {/* Content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:px-12 lg:px-20"
           style={{ opacity: globalCapOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
             <div
-              className="mb-12 md:mb-16"
+              className="mb-8 md:mb-12"
               style={{
                 opacity: headerOpacity,
                 transform: `translateY(${headerY}px)`,
@@ -361,11 +361,11 @@ function Philosophy() {
 
         {/* Content */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
-            <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-20">
+            <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-16">
               {/* Left column */}
               <div className="lg:col-span-5">
                 <div

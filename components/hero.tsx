@@ -95,7 +95,7 @@ export function Hero() {
 
         {/* Floating content layers */}
         <div
-          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] md:px-12 lg:px-20"
+          className="relative z-10 flex h-full flex-col justify-center px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(5rem,calc(4rem+env(safe-area-inset-top)))] md:px-12 lg:px-20"
           style={{ opacity: globalOpacity }}
         >
           <div className="mx-auto w-full max-w-[1400px]">
