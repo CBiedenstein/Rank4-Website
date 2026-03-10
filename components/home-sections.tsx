@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Cpu, Target, Layers, Zap, Shield, Clock, Users } from "lucide-react"
+import { ArrowRight, Cpu, Target, Layers, Zap, Shield, Clock, Users, Workflow } from "lucide-react"
 
 const differentiators = [
   {
@@ -28,6 +28,12 @@ const differentiators = [
     title: "Embedded Team Extension",
     description:
       "We integrate with your engineering workflow. Direct communication, shared repositories, and knowledge transfer built into every engagement.",
+  },
+  {
+    icon: Workflow,
+    title: "Standards-First Design",
+    description:
+      "VITA 49, White Rabbit, IEEE 1588 — we build on proven industry standards for long-term interoperability and ecosystem compatibility.",
   },
 ]
 
@@ -178,7 +184,7 @@ export function HomeSections() {
           </div>
 
           {/* Bento Grid */}
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-3">
             {/* Card 1 - Large featured card */}
             <div
               className="group relative col-span-1 row-span-1 overflow-hidden rounded-lg border p-6 transition-all duration-300 hover:border-[#A27035]/60 md:col-span-2 md:row-span-2 md:p-8"
