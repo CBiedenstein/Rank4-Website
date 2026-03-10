@@ -127,12 +127,12 @@ const experience = [
     label: "RFSoC generations supported",
   },
   {
-    metric: "2019",
-    label: "Early access partner since",
+    metric: "10,000+",
+    label: "Hours MTBF achieved",
   },
   {
-    metric: "100%",
-    label: "First-pass timing closure rate",
+    metric: "24/7",
+    label: "Mission-critical deployments",
   },
 ]
 
