@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Capabilities", href: "/capabilities" },
   { label: "Philosophy", href: "/philosophy" },
   { label: "Platforms", href: "/platforms" },
+  { label: "Applications", href: "/applications" },
 ]
 
 export function Navbar() {
