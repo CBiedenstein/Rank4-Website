@@ -211,7 +211,7 @@ function Capabilities() {
                     className="relative rounded-sm border p-3 md:p-6"
                     style={{
                       borderColor: "rgba(162,112,53,0.2)",
-                      backgroundColor: "rgba(33,17,3,0.6)",
+                      backgroundColor: "rgba(33,17,3,0.85)",
                       opacity,
                       transform: `translateY(${y}px)`,
                     }}
@@ -481,7 +481,7 @@ function Philosophy() {
                         className="flex gap-3 rounded-sm border p-3 md:gap-5 md:p-8"
                         style={{
                           borderColor: "rgba(162,112,53,0.12)",
-                          backgroundColor: "rgba(33,17,3,0.55)",
+                          backgroundColor: "rgba(33,17,3,0.85)",
                           opacity,
                           transform: `translateY(${y}px)`,
                         }}
