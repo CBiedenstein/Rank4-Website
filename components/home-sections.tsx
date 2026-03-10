@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Cpu, Target, Layers, Zap, Shield, Clock, Users, Workflow } from "lucide-react"
+import { ArrowRight, Cpu, Target, Layers, Zap, Shield, Clock, Users, Crosshair } from "lucide-react"
 
 const differentiators = [
   {
@@ -30,10 +30,10 @@ const differentiators = [
       "We integrate with your engineering workflow. Direct communication, shared repositories, and knowledge transfer built into every engagement.",
   },
   {
-    icon: Workflow,
-    title: "Standards-First Design",
+    icon: Crosshair,
+    title: "Defense-Ready Solutions",
     description:
-      "VITA 49, White Rabbit, IEEE 1588 — we build on proven industry standards for long-term interoperability and ecosystem compatibility.",
+      "Purpose-built for mission-critical environments. Our designs meet the rigorous reliability, security, and performance demands of defense and aerospace applications.",
   },
 ]
 
