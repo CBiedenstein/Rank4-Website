@@ -157,7 +157,7 @@ export function HomeSections() {
           ))}
         </div>
 
-        {/* Why Rank4 */}
+        {/* Why Rank4 - Bento Grid Style */}
         <div className="mt-24 md:mt-32">
           <div className="mb-12 md:mb-16">
             <div className="flex items-center gap-3 mb-4">
@@ -175,43 +175,144 @@ export function HomeSections() {
             >
               The Rank4 Difference
             </h2>
-            <p
-              className="mt-4 max-w-2xl text-base leading-relaxed md:text-lg"
-              style={{ color: "#F1DAC4", opacity: 0.6 }}
-            >
-              We combine deep silicon expertise with agile delivery practices to ship
-              production-ready FPGA solutions on aggressive timelines.
-            </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {differentiators.map((item) => (
-              <div
-                key={item.title}
-                className="group rounded-sm border p-6 transition-all hover:border-[#A27035]/40"
+          {/* Bento Grid */}
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+            {/* Card 1 - Large featured card */}
+            <div
+              className="group relative col-span-1 row-span-1 overflow-hidden rounded-lg border p-6 transition-all duration-300 hover:border-[#A27035]/60 md:col-span-2 md:row-span-2 md:p-8"
+              style={{
+                borderColor: "rgba(162,112,53,0.2)",
+                background: "linear-gradient(135deg, rgba(123,13,30,0.15) 0%, rgba(33,17,3,0.8) 100%)",
+              }}
+            >
+              {/* Glow effect on hover */}
+              <div 
+                className="pointer-events-none absolute -inset-px rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={{
-                  borderColor: "rgba(162,112,53,0.15)",
-                  backgroundColor: "rgba(33,17,3,0.5)",
+                  background: "radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(162,112,53,0.15), transparent 40%)",
                 }}
-              >
-                <div
-                  className="flex h-12 w-12 items-center justify-center rounded-sm transition-colors group-hover:bg-[#7B0D1E]/30"
-                  style={{ backgroundColor: "rgba(123,13,30,0.2)" }}
-                >
-                  <item.icon className="h-6 w-6" style={{ color: "#A27035" }} />
+              />
+              
+              {/* Decorative background pattern */}
+              <div 
+                className="absolute top-0 right-0 h-64 w-64 opacity-10"
+                style={{
+                  background: "radial-gradient(circle, #7B0D1E 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                }}
+              />
+
+              <div className="relative">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110"
+                    style={{ 
+                      backgroundColor: "rgba(123,13,30,0.3)",
+                      boxShadow: "0 0 0 1px rgba(162,112,53,0.2)",
+                    }}
+                  >
+                    <Zap className="h-7 w-7" style={{ color: "#A27035" }} />
+                  </div>
+                  <span 
+                    className="rounded-full px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-wider"
+                    style={{ 
+                      backgroundColor: "rgba(162,112,53,0.15)", 
+                      color: "#A27035",
+                      border: "1px solid rgba(162,112,53,0.3)",
+                    }}
+                  >
+                    Core Strength
+                  </span>
                 </div>
                 <h3
-                  className="mt-5 text-lg font-bold"
+                  className="mt-6 text-2xl font-bold md:text-3xl"
                   style={{ color: "#F1DAC4" }}
                 >
-                  {item.title}
+                  {differentiators[0].title}
                 </h3>
                 <p
-                  className="mt-2 text-sm leading-relaxed"
-                  style={{ color: "#F1DAC4", opacity: 0.5 }}
+                  className="mt-4 max-w-md text-base leading-relaxed md:text-lg"
+                  style={{ color: "#F1DAC4", opacity: 0.6 }}
                 >
-                  {item.description}
+                  {differentiators[0].description}
                 </p>
+                
+                {/* Stats row */}
+                <div className="mt-8 flex gap-8">
+                  <div>
+                    <div className="text-3xl font-bold" style={{ color: "#7B0D1E" }}>2-4x</div>
+                    <div className="text-xs uppercase tracking-wider" style={{ color: "#F1DAC4", opacity: 0.5 }}>Faster delivery</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold" style={{ color: "#7B0D1E" }}>100+</div>
+                    <div className="text-xs uppercase tracking-wider" style={{ color: "#F1DAC4", opacity: 0.5 }}>IP modules</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Remaining cards - Compact style */}
+            {differentiators.slice(1).map((item, index) => (
+              <div
+                key={item.title}
+                className="group relative overflow-hidden rounded-lg border p-5 transition-all duration-300 hover:border-[#A27035]/60 md:p-6"
+                style={{
+                  borderColor: "rgba(162,112,53,0.2)",
+                  backgroundColor: "rgba(33,17,3,0.6)",
+                }}
+              >
+                {/* Subtle gradient overlay */}
+                <div 
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(123,13,30,0.1) 0%, transparent 60%)",
+                  }}
+                />
+
+                <div className="relative">
+                  {/* Number badge */}
+                  <div className="flex items-center justify-between">
+                    <div
+                      className="flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110"
+                      style={{ 
+                        backgroundColor: "rgba(123,13,30,0.25)",
+                        boxShadow: "0 0 0 1px rgba(162,112,53,0.15)",
+                      }}
+                    >
+                      <item.icon className="h-5 w-5" style={{ color: "#A27035" }} />
+                    </div>
+                    <span 
+                      className="font-mono text-4xl font-bold"
+                      style={{ color: "rgba(162,112,53,0.15)" }}
+                    >
+                      0{index + 2}
+                    </span>
+                  </div>
+                  
+                  <h3
+                    className="mt-4 text-lg font-bold"
+                    style={{ color: "#F1DAC4" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="mt-2 text-sm leading-relaxed"
+                    style={{ color: "#F1DAC4", opacity: 0.5 }}
+                  >
+                    {item.description}
+                  </p>
+
+                  {/* Hover arrow indicator */}
+                  <div 
+                    className="mt-4 flex items-center gap-1 text-xs font-medium opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    style={{ color: "#A27035" }}
+                  >
+                    <span className="font-mono uppercase tracking-wider">Learn more</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
