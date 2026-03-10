@@ -47,10 +47,6 @@ export function Contact() {
   // Footer line fades in last
   const footerOpacity = clamp((scrollProgress - 0.4) / 0.12, 0, 1)
 
-  // Global fade out
-  const fadeOut = clamp(1 - (scrollProgress - 0.8) / 0.2, 0, 1)
-  const globalOpacity = scrollProgress < 0.8 ? 1 : fadeOut
-
   // Image parallax
   const imageY = scrollProgress * -60
   const imageScale = 1 + scrollProgress * 0.06
@@ -98,7 +94,6 @@ export function Contact() {
         {/* Floating content */}
         <div
           className="relative z-10 flex h-full flex-col justify-start px-6 pb-[max(1rem,env(safe-area-inset-bottom))] pt-[max(4.5rem,calc(3.5rem+env(safe-area-inset-top)))] md:justify-center md:px-12 lg:px-20"
-          style={{ opacity: globalOpacity }}
           id="contact"
         >
           <div className="mx-auto w-full max-w-[1400px]">
@@ -384,15 +379,7 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Bottom gradient for fade-out */}
-        <div
-          className="pointer-events-none absolute right-0 bottom-0 left-0 z-20 h-48"
-          style={{
-            background: `linear-gradient(to bottom, transparent, #3D1308)`,
-            opacity: clamp((scrollProgress - 0.85) / 0.15, 0, 1),
-          }}
-          aria-hidden="true"
-        />
+
       </div>
     </div>
   )
