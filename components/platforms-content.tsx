@@ -119,16 +119,16 @@ const platforms = [
 
 const experience = [
   {
-    metric: "50+",
-    label: "Versal & RFSoC projects delivered",
+    metric: "256+",
+    label: "Element phased arrays deployed",
   },
   {
     metric: "Gen 1-3",
     label: "RFSoC generations supported",
   },
   {
-    metric: "10,000+",
-    label: "Hours MTBF achieved",
+    metric: "<1μs",
+    label: "Beam steering latency",
   },
   {
     metric: "24/7",
