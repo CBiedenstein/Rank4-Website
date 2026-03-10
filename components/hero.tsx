@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react"
 import Image from "next/image"
-import { scrollToSection } from "@/lib/scroll-to-section"
+import Link from "next/link"
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -222,20 +222,20 @@ export function Hero() {
                 willChange: "opacity",
               }}
             >
-              <button
-                onClick={() => scrollToSection("contact", 0.35)}
-                className="inline-flex cursor-pointer items-center justify-center rounded-sm px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] transition-all hover:brightness-110"
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-sm px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] transition-all hover:brightness-110"
                 style={{ backgroundColor: "#7B0D1E", color: "#F1DAC4" }}
               >
                 Start a project
-              </button>
-              <a
-                href="#capabilities"
+              </Link>
+              <Link
+                href="/capabilities"
                 className="inline-flex items-center justify-center rounded-sm border px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] transition-all hover:bg-[#F1DAC4]/10"
                 style={{ borderColor: "rgba(241,218,196,0.3)", color: "#F1DAC4" }}
               >
                 Our capabilities
-              </a>
+              </Link>
             </div>
           </div>
         </div>
