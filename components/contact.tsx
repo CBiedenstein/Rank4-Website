@@ -12,6 +12,8 @@ export function Contact() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleScroll = useCallback(() => {
     if (!containerRef.current) return
@@ -27,9 +29,36 @@ export function Contact() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [handleScroll])
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSubmitted(true)
+    setIsSubmitting(true)
+    setError(null)
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to send message")
+      }
+
+      setSubmitted(true)
+    } catch {
+      setError("Failed to send message. Please try again or email us directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   // Header fades in immediately, stays visible
@@ -337,13 +366,19 @@ export function Contact() {
                           placeholder="Tell us about your project requirements..."
                         />
                       </div>
+                      {error && (
+                        <p className="text-sm" style={{ color: "#ef4444" }}>
+                          {error}
+                        </p>
+                      )}
                       <button
                         type="submit"
-                        className="mt-2 inline-flex items-center justify-center gap-2.5 rounded-sm px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] transition-all hover:brightness-110"
+                        disabled={isSubmitting}
+                        className="mt-2 inline-flex items-center justify-center gap-2.5 rounded-sm px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-[0.15em] transition-all hover:brightness-110 disabled:opacity-50"
                         style={{ backgroundColor: "#7B0D1E", color: "#F1DAC4" }}
                       >
-                        Send Message
-                        <Send className="h-3.5 w-3.5" />
+                        {isSubmitting ? "Sending..." : "Send Message"}
+                        {!isSubmitting && <Send className="h-3.5 w-3.5" />}
                       </button>
                     </form>
                   )}

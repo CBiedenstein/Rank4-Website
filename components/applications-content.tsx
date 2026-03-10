@@ -107,18 +107,28 @@ function WhitepaperCard({ paper }: WhitepaperCardProps) {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission delay
-    await new Promise((resolve) => setTimeout(resolve, 800))
+    try {
+      const response = await fetch("/api/whitepaper", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          whitepaperId: paper.id,
+          whitepaperTitle: paper.title,
+        }),
+      })
 
-    // In production, you would send this data to your backend/CRM
-    console.log("Whitepaper download request:", {
-      ...formData,
-      whitepaperId: paper.id,
-      timestamp: new Date().toISOString(),
-    })
+      if (!response.ok) {
+        throw new Error("Failed to submit")
+      }
 
-    setIsSubmitting(false)
-    setSubmitted(true)
+      setSubmitted(true)
+    } catch (err) {
+      console.error("Whitepaper form error:", err)
+      alert("Failed to process request. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleDownload = () => {
