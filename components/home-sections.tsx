@@ -1,5 +1,6 @@
 "use client"
 
+import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Cpu, Target, Layers, Zap, Shield, Clock, Users, Crosshair } from "lucide-react"
@@ -68,6 +69,17 @@ const sections = [
 ]
 
 export function HomeSections() {
+  const featuredCardRef = useRef<HTMLDivElement>(null)
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!featuredCardRef.current) return
+    const rect = featuredCardRef.current.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    featuredCardRef.current.style.setProperty("--mouse-x", `${x}px`)
+    featuredCardRef.current.style.setProperty("--mouse-y", `${y}px`)
+  }
+
   return (
     <section
       className="px-6 py-20 md:px-12 md:py-32 lg:px-20"
@@ -187,6 +199,8 @@ export function HomeSections() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-3">
             {/* Card 1 - Large featured card */}
             <div
+              ref={featuredCardRef}
+              onMouseMove={handleMouseMove}
               className="group relative col-span-1 row-span-1 overflow-hidden rounded-lg border p-6 transition-all duration-300 hover:border-[#A27035]/60 md:col-span-2 md:row-span-2 md:p-8"
               style={{
                 borderColor: "rgba(162,112,53,0.2)",
