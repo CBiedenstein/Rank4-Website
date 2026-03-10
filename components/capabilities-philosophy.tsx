@@ -340,12 +340,12 @@ function Philosophy() {
           />
         </div>
 
-        {/* Dark overlay that deepens on scroll */}
+        {/* Crimson overlay that deepens on scroll */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundColor: "#211103",
-            opacity: 0.6 + philProgress * 0.2,
+            backgroundColor: "#7B0D1E",
+            opacity: 0.55 + philProgress * 0.25,
           }}
           aria-hidden="true"
         />
