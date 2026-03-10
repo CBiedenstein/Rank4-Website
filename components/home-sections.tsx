@@ -2,7 +2,34 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Cpu, Target, Layers } from "lucide-react"
+import { ArrowRight, Cpu, Target, Layers, Zap, Shield, Clock, Users } from "lucide-react"
+
+const differentiators = [
+  {
+    icon: Zap,
+    title: "Rapid Prototyping",
+    description:
+      "From concept to working silicon in weeks, not months. Our modular IP library and simulation-first methodology accelerate time-to-first-signal.",
+  },
+  {
+    icon: Shield,
+    title: "Production-Grade Deliverables",
+    description:
+      "Every project ships with comprehensive documentation, testbenches, and deployment-ready code. No throwaway prototypes.",
+  },
+  {
+    icon: Clock,
+    title: "Deterministic Performance",
+    description:
+      "We guarantee latency bounds and resource utilization. Timing closure is verified across all operating conditions before delivery.",
+  },
+  {
+    icon: Users,
+    title: "Embedded Team Extension",
+    description:
+      "We integrate with your engineering workflow. Direct communication, shared repositories, and knowledge transfer built into every engagement.",
+  },
+]
 
 const sections = [
   {
@@ -130,8 +157,68 @@ export function HomeSections() {
           ))}
         </div>
 
+        {/* Why Rank4 */}
+        <div className="mt-24 md:mt-32">
+          <div className="mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-8" style={{ backgroundColor: "#A27035" }} />
+              <span
+                className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em]"
+                style={{ color: "#A27035" }}
+              >
+                Why Rank4
+              </span>
+            </div>
+            <h2
+              className="text-3xl font-bold tracking-tight md:text-5xl"
+              style={{ color: "#F1DAC4" }}
+            >
+              The Rank4 Difference
+            </h2>
+            <p
+              className="mt-4 max-w-2xl text-base leading-relaxed md:text-lg"
+              style={{ color: "#F1DAC4", opacity: 0.6 }}
+            >
+              We combine deep silicon expertise with agile delivery practices to ship
+              production-ready FPGA solutions on aggressive timelines.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {differentiators.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-sm border p-6 transition-all hover:border-[#A27035]/40"
+                style={{
+                  borderColor: "rgba(162,112,53,0.15)",
+                  backgroundColor: "rgba(33,17,3,0.5)",
+                }}
+              >
+                <div
+                  className="flex h-12 w-12 items-center justify-center rounded-sm transition-colors group-hover:bg-[#7B0D1E]/30"
+                  style={{ backgroundColor: "rgba(123,13,30,0.2)" }}
+                >
+                  <item.icon className="h-6 w-6" style={{ color: "#A27035" }} />
+                </div>
+                <h3
+                  className="mt-5 text-lg font-bold"
+                  style={{ color: "#F1DAC4" }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className="mt-2 text-sm leading-relaxed"
+                  style={{ color: "#F1DAC4", opacity: 0.5 }}
+                >
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center md:mt-24">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 rounded-sm px-10 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] transition-all hover:brightness-110"
