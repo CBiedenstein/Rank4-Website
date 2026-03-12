@@ -63,9 +63,14 @@ const services = [
 
 const principles = [
   {
-    title: "Deterministic Latency",
+    title: "Knowledge Transfer & Education",
     description:
-      "Every processing pipeline is designed with hard real-time constraints. Cycle-accurate timing from input to output.",
+      "We invest in growing your team's capabilities. Training sessions, detailed design walkthroughs, and mentorship in DSP, FPGA, and RF fundamentals.",
+  },
+  {
+    title: "Production-Grade Deliverables",
+    description:
+      "Full documentation, constrained timing closure reports, and regression test suites ready for your team.",
   },
   {
     title: "Resource-Optimal Design",
@@ -78,14 +83,9 @@ const principles = [
       "Bit-accurate behavioral models precede any RTL. Algorithmic performance validated before a single line of HDL.",
   },
   {
-    title: "Production-Grade Deliverables",
+    title: "Deterministic Latency",
     description:
-      "Full documentation, constrained timing closure reports, and regression test suites ready for your team.",
-  },
-  {
-    title: "Knowledge Transfer & Education",
-    description:
-      "We invest in growing your team's capabilities. Training sessions, detailed design walkthroughs, and mentorship in DSP, FPGA, and RF fundamentals.",
+      "Every processing pipeline is designed with hard real-time constraints. Cycle-accurate timing from input to output.",
   },
 ]
 
