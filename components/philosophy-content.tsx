@@ -2,25 +2,43 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Check, ArrowRight, Target, Gauge, TestTube, FileCheck } from "lucide-react"
+import { Check, ArrowRight, Gauge, TestTube, FileCheck, GraduationCap, Brain } from "lucide-react"
 
 const principles = [
   {
-    icon: Target,
-    title: "Deterministic Latency",
-    subtitle: "Predictable by design",
+    icon: GraduationCap,
+    title: "Knowledge Transfer & Education",
+    subtitle: "Grow your team",
     description:
-      "Every processing pipeline is designed with hard real-time constraints. Cycle-accurate timing from input to output.",
+      "We invest in elevating your engineering team's capabilities through structured training, hands-on workshops, and ongoing mentorship in DSP, FPGA, and RF design.",
     details: [
-      "Fixed-latency architectures eliminate jitter",
-      "Pipeline stages balanced for consistent throughput",
-      "Worst-case timing analysis at design time",
-      "No dynamic memory allocation in critical paths",
-      "Interrupt-free processing for timing guarantees",
+      "Custom training programs for your team's skill level",
+      "Hands-on workshops with real hardware",
+      "DSP fundamentals: filtering, FFTs, modulation",
+      "FPGA architecture and design best practices",
+      "RF/analog concepts for digital engineers",
     ],
     example: {
       title: "Real-World Impact",
-      text: "In a recent radar processing system, we achieved sub-microsecond jitter across 16 parallel channels processing 500 MHz bandwidth signals, enabling coherent pulse integration impossible with variable-latency designs.",
+      text: "After a 3-week embedded training program, an aerospace client's software team successfully took ownership of ongoing FPGA maintenance and minor feature development, reducing their dependency on external contractors by 60%.",
+    },
+  },
+  {
+    icon: FileCheck,
+    title: "Production-Grade Deliverables",
+    subtitle: "Ready for your team",
+    description:
+      "Full documentation, constrained timing closure reports, and regression test suites ready for your team.",
+    details: [
+      "Complete micro-architecture documentation",
+      "Constrained timing closure with margin",
+      "Automated regression test infrastructure",
+      "Integration guides and example code",
+      "Knowledge transfer sessions included",
+    ],
+    example: {
+      title: "Real-World Impact",
+      text: "A defense contractor was able to bring our delivered IP into their internal CI/CD pipeline within days, not weeks, because of comprehensive documentation and self-contained test infrastructure.",
     },
   },
   {
@@ -60,21 +78,21 @@ const principles = [
     },
   },
   {
-    icon: FileCheck,
-    title: "Production-Grade Deliverables",
-    subtitle: "Ready for your team",
+    icon: Brain,
+    title: "Cutting-Edge AI & DSP",
+    subtitle: "Intelligence at the edge",
     description:
-      "Full documentation, constrained timing closure reports, and regression test suites ready for your team.",
+      "We implement the latest machine learning and signal processing algorithms directly in FPGA fabric for real-time inference and adaptive processing.",
     details: [
-      "Complete micro-architecture documentation",
-      "Constrained timing closure with margin",
-      "Automated regression test infrastructure",
-      "Integration guides and example code",
-      "Knowledge transfer sessions included",
+      "Neural network inference in programmable logic",
+      "Adaptive beamforming and interference cancellation",
+      "On-chip model quantization and optimization",
+      "Real-time feature extraction pipelines",
+      "Hardware-accelerated ML for RF applications",
     ],
     example: {
       title: "Real-World Impact",
-      text: "A defense contractor was able to bring our delivered IP into their internal CI/CD pipeline within days, not weeks, because of comprehensive documentation and self-contained test infrastructure.",
+      text: "We deployed a CNN-based signal classifier on RFSoC that identifies modulation schemes in under 10 microseconds, enabling cognitive radio adaptation 100x faster than GPU-based alternatives.",
     },
   },
 ]
