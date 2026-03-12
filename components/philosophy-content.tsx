@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Check, ArrowRight, Target, Gauge, TestTube, FileCheck } from "lucide-react"
+import { Check, ArrowRight, Target, Gauge, TestTube, FileCheck, GraduationCap } from "lucide-react"
 
 const principles = [
   {
@@ -75,6 +75,24 @@ const principles = [
     example: {
       title: "Real-World Impact",
       text: "A defense contractor was able to bring our delivered IP into their internal CI/CD pipeline within days, not weeks, because of comprehensive documentation and self-contained test infrastructure.",
+    },
+  },
+  {
+    icon: GraduationCap,
+    title: "Knowledge Transfer & Education",
+    subtitle: "Grow your team",
+    description:
+      "We invest in elevating your engineering team's capabilities through structured training, hands-on workshops, and ongoing mentorship in DSP, FPGA, and RF design.",
+    details: [
+      "Custom training programs for your team's skill level",
+      "Hands-on workshops with real hardware",
+      "DSP fundamentals: filtering, FFTs, modulation",
+      "FPGA architecture and design best practices",
+      "RF/analog concepts for digital engineers",
+    ],
+    example: {
+      title: "Real-World Impact",
+      text: "After a 3-week embedded training program, an aerospace client's software team successfully took ownership of ongoing FPGA maintenance and minor feature development, reducing their dependency on external contractors by 60%.",
     },
   },
 ]

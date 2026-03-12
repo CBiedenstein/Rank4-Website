@@ -82,6 +82,11 @@ const principles = [
     description:
       "Full documentation, constrained timing closure reports, and regression test suites ready for your team.",
   },
+  {
+    title: "Knowledge Transfer & Education",
+    description:
+      "We invest in growing your team's capabilities. Training sessions, detailed design walkthroughs, and mentorship in DSP, FPGA, and RF fundamentals.",
+  },
 ]
 
 /* ============================================ */
