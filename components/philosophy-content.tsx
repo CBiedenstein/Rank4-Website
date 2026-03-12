@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Check, ArrowRight, Target, Gauge, TestTube, FileCheck, GraduationCap } from "lucide-react"
+import { Check, ArrowRight, Gauge, TestTube, FileCheck, GraduationCap, Brain } from "lucide-react"
 
 const principles = [
   {
@@ -78,21 +78,21 @@ const principles = [
     },
   },
   {
-    icon: Target,
-    title: "Deterministic Latency",
-    subtitle: "Predictable by design",
+    icon: Brain,
+    title: "Cutting-Edge AI & DSP",
+    subtitle: "Intelligence at the edge",
     description:
-      "Every processing pipeline is designed with hard real-time constraints. Cycle-accurate timing from input to output.",
+      "We implement the latest machine learning and signal processing algorithms directly in FPGA fabric for real-time inference and adaptive processing.",
     details: [
-      "Fixed-latency architectures eliminate jitter",
-      "Pipeline stages balanced for consistent throughput",
-      "Worst-case timing analysis at design time",
-      "No dynamic memory allocation in critical paths",
-      "Interrupt-free processing for timing guarantees",
+      "Neural network inference in programmable logic",
+      "Adaptive beamforming and interference cancellation",
+      "On-chip model quantization and optimization",
+      "Real-time feature extraction pipelines",
+      "Hardware-accelerated ML for RF applications",
     ],
     example: {
       title: "Real-World Impact",
-      text: "In a recent radar processing system, we achieved sub-microsecond jitter across 16 parallel channels processing 500 MHz bandwidth signals, enabling coherent pulse integration impossible with variable-latency designs.",
+      text: "We deployed a CNN-based signal classifier on RFSoC that identifies modulation schemes in under 10 microseconds, enabling cognitive radio adaptation 100x faster than GPU-based alternatives.",
     },
   },
 ]

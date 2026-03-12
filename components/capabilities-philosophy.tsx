@@ -83,9 +83,9 @@ const principles = [
       "Bit-accurate behavioral models precede any RTL. Algorithmic performance validated before a single line of HDL.",
   },
   {
-    title: "Deterministic Latency",
+    title: "Cutting-Edge AI & DSP",
     description:
-      "Every processing pipeline is designed with hard real-time constraints. Cycle-accurate timing from input to output.",
+      "We implement the latest machine learning and signal processing algorithms directly in FPGA fabric for real-time inference and adaptive processing.",
   },
 ]
 
