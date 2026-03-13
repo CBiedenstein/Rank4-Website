@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
           </p>
           <p style="color: #999; font-size: 12px; margin-top: 24px;">
             Rank4 - Precision FPGA Engineering<br />
-            <a href="https://rank4.io" style="color: #7B0D1E;">rank4.io</a>
+            <a href="https://www.rank-4.com" style="color: #7B0D1E;">rank-4.com</a>
           </p>
         </div>
       `,

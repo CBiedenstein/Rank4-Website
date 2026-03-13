@@ -1,0 +1,8 @@
+# Rank4 - Post-Modern Technology Solutions
+# https://www.rank-4.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.rank-4.com/sitemap.xml

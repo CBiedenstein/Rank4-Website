@@ -173,7 +173,7 @@ export function Contact() {
 
                 <div className="mt-10 flex flex-col gap-6">
                   <a
-                    href="mailto:contact@rank4.io"
+                    href="mailto:contact@rank-4.com"
                     className="group flex items-center gap-3 transition-opacity hover:opacity-100"
                     style={{ opacity: 0.8 }}
                   >
@@ -194,7 +194,7 @@ export function Contact() {
                         className="text-sm font-medium"
                         style={{ color: "#F1DAC4" }}
                       >
-                        contact@rank4.io
+                        contact@rank-4.com
                       </p>
                     </div>
                     <ArrowUpRight

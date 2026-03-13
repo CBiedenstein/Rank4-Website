@@ -47,6 +47,7 @@ const sections = [
       "FPGA design, SDR systems, DSP algorithms, system architecture, high-speed interfaces, and comprehensive verification services.",
     href: "/capabilities",
     image: "/images/capabilities-bg.jpg",
+    imageAlt: "FPGA circuit board with intricate signal processing pathways",
   },
   {
     icon: Target,
@@ -56,6 +57,7 @@ const sections = [
       "Deterministic latency, resource-optimal design, simulation-first methodology, and production-grade deliverables.",
     href: "/philosophy",
     image: "/images/philosophy-bg.jpg",
+    imageAlt: "Engineering workspace with signal analysis equipment",
   },
   {
     icon: Layers,
@@ -65,6 +67,7 @@ const sections = [
       "Deep expertise in AMD/Xilinx Versal ACAP and Zynq UltraScale+ RFSoC platforms for demanding signal processing applications.",
     href: "/platforms",
     image: "/images/platforms-bg.jpg",
+    imageAlt: "AMD Xilinx FPGA chip with exposed silicon die",
   },
 ]
 
@@ -120,7 +123,7 @@ export function HomeSections() {
               <div className="absolute inset-0">
                 <Image
                   src={section.image}
-                  alt=""
+                  alt={section.imageAlt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
